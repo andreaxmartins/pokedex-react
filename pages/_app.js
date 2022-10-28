@@ -4,14 +4,12 @@ import { useState } from 'react';
 import PokemonList from './PokemonList';
 
 function App() {
-  // const [pokemon, setPokemon] = useState(['Charizard', 'Pikachu']);
-
-  const pokemon = {
+  const [pokemon, setPokemon] = useState({
     name: 'Charizard',
     type01: 'Fire',
     type02: 'Flying',
     number: '#06',
-  };
+  });
 
   return (
     <section className="card" css={styles.card}>

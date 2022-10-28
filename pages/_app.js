@@ -6,20 +6,27 @@ import PokemonList from './PokemonList';
 function App() {
   // const [pokemon, setPokemon] = useState(['Charizard', 'Pikachu']);
 
+  const pokemon = {
+    name: 'Charizard',
+    type01: 'Fire',
+    type02: 'Flying',
+    number: '#06',
+  };
+
   return (
     <section className="card" css={styles.card}>
       <div className="pokemon-icon">
         {/* I get a warning from ESLint about the image tag. How should I proceed with this? */}
-        <img alt="Pokemon Image"></img>
+        <img alt={`${pokemon.name} picture`}></img>
       </div>
       <div className="pokemon-info">
-        <h2 className="pokemon-name">Charizard</h2>
+        <h2 className="pokemon-name">{pokemon.name}</h2>
         <div className="pokemon-types">
-          <h3>Fire</h3>
-          <h3>Flying</h3>
+          <h3>{pokemon.type01}</h3>
+          <h3>{pokemon.type02}</h3>
         </div>
       </div>
-      <div className="pokemon-number">#06</div>
+      <div className="pokemon-number">{pokemon.number}</div>
     </section>
   );
 }

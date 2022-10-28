@@ -1,5 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import Head from 'next/head';
+import { useState } from 'react';
+import PokemonList from './PokemonList';
 
 const Home = () => {
   return (
@@ -11,7 +13,26 @@ const Home = () => {
       </Head>
 
       <main css={styles.main}>
-        <h1 css={styles.title}>Cool Boilerplate ⭐️</h1>
+        <h1 css={styles.title}>Find your Pokémon</h1>
+        {/* Search Bar */}
+        <section role="search">
+          <form action="#" method="get">
+            <fieldset>
+              <label for="s">
+                <input
+                  type="search"
+                  name="s"
+                  id="s"
+                  placeholder="Search by name or number"
+                  maxlength="200"
+                />
+              </label>
+            </fieldset>
+          </form>
+        </section>
+        <section className="pokemon-container">
+          <section className="all-pokemon"></section>
+        </section>
       </main>
     </div>
   );
